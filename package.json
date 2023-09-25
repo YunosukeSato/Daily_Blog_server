@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client": "npm run dev --prefix client",
-    "server": "nodemon server",
-    "dev": "npm-run-all --parallel server client"
+    "dev": "nodemon server",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
