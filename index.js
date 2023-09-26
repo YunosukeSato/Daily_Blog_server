@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(
   cors({
     credentials: true,
-    origin: "https://daily-blog-client.vercel.app/",
+    origin: "https://daily-blog-client.vercel.app",
   })
 );
 app.use("/auth", authRoutes);
