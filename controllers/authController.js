@@ -24,7 +24,7 @@ const signup = async (req, res) => {
 
   const token = await generateToken(username);
 
-  res.cookie("token", token, { httpOnly: true, secure: true, path: "/" });
+  res.cookie("token", token, { httpOnly: true, secure: true, path: "/", sameSite: "None" });
 
   return res.status(201).json({ message: "User successully created", user });
 };
@@ -43,7 +43,7 @@ const login = async (req, res) => {
 
   const token = await generateToken(username);
 
-  res.cookie("token", token, { httpOnly: true, secure: true, path: "/" });
+  res.cookie("token", token, { httpOnly: true, secure: true, path: "/", sameSite: "None" });
 
   return res.status(200).json({ message: "successfully logged in", user });
 };
